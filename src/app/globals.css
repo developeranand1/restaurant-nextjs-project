@@ -1,42 +1,230 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+*:focus {
+    outline: none;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.header-wrapper {
+    display: flex;
+    justify-content: space-between;
 }
 
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
+.header-wrapper ul {
+    display: flex;
 }
 
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+.header-wrapper ul li {
+    list-style-type: none;
+    padding: 4px;
 }
 
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
+.header-wrapper ul li a {
+    text-decoration: none;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+.header-wrapper ul li button {
+    background-color: transparent;
+    border: none;
+    color: blueviolet;
+    font-size: 16px;
+    cursor: pointer;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
+.footer-wrapper {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: 10px;
+    background-color: #fff;
+}
+
+
+
+.input-wrapper {
+    margin: 10px;
+}
+
+.input-field {
+    width: 200px;
+    height: 30px;
+}
+
+.button {
+    width: 200px;
+    height: 30px;
+}
+
+.container {
+    text-align: center;
+}
+
+.button-link {
+    border: 0;
+    cursor: pointer;
+    background-color: transparent;
+    margin: 20px;
+    color: skyblue;
+}
+
+.input-error {
+    font-size: 13px;
+    color: red;
+    position: absolute;
+    padding: 8px;
+}
+
+
+table,
+td,
+th {
+    border: 1px solid #000;
+    border-collapse: collapse;
+    padding: 10px;
+}
+
+table td button {
+    margin: 5px;
+}
+
+table img {
+    width: 80px;
+}
+
+
+
+.main-page-banner,
+.restaurant-page-banner {
+    background-image: url("https://gumlet.assettype.com/down-to-earth%2Fimport%2Flibrary%2Flarge%2F2019-03-05%2F0.89399200_1551782137_fast1.jpg?w=1024&auto=format%2Ccompress&fit=max");
+    background-color: rgba(0, 0, 0, 0.4);
+    background-blend-mode: multiply;
+    padding: 30px;
+    height: 230px;
+    color: #fff;
+    text-align: center;
+}
+
+.main-page-banner .input-wrapper {
+    background-color: #fff;
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin: auto;
+    width: 60%;
+}
+
+.select-input {
+    height: 40px;
+    border: none;
+    width: 25%;
+    padding-left: 16px;
+
+}
+
+.search-input {
+    height: 40px;
+    border: none;
+    width: 45%;
+    border-left: 1px solid #ccc;
+    padding-left: 16px;
+}
+
+.location-list {
+    color: #000;
+    list-style-type: none;
+    text-align: left;
+    position: absolute;
+    background-color: #fff;
+    padding: 0;
+    margin: 0;
+    margin-left: -5px;
+    border: 1px solid #ccc;
+
+    li {
+        width: 200px;
+        padding: 5px;
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+    }
+}
+
+
+.restaurant-list-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 40px;
+    margin-bottom: 50px;
+}
+
+.restaurant-wrapper {
+    width: 45%;
+    background-color: orange;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.restaurant-wrapper .heading-wrapper,
+.restaurant-wrapper .address-wrapper {
+    padding-left: 15px;
+    display: flex;
+    justify-content: flex-start;
+}
+
+
+.restaurant-wrapper h5 {
+    margin-left: 15px;
+}
+
+.restaurant-wrapper .address {
+    margin-left: 5px;
+}
+
+.restaurant-page-banner h1 {
+    font-size: 65px;
+}
+
+.detail-wrapper {
+    display: flex;
+    background-color: orange;
+
+    h3 {
+        width: 50%;
+    }
+}
+
+.food-item-wrapper {
+    margin-top: 50px;
+    margin-bottom: 50px;
+
+    .list-item {
+        padding: 20px;
+        color: orange;
+        font-weight: bold;
+        border-bottom: 1px solid orange;
+        display: flex;
+        text-transform: capitalize;
+
+        button{
+            color: #fff;
+            background-color: orange;
+            border: none;
+            padding: 5px;
+            border-radius: 4px;
+            cursor: pointer;
+
+        }
+
+        img{
+            width: 100px;
+            padding-right: 20px;
+            height: 100px;
+        }
+
+
+        .description{
+            font-weight: lighter;
+        }
+    }
 }
